@@ -4,7 +4,8 @@
 "Living":1300,
 "Co-op":"Limited",
 "Food":true,
-"Extra":250
+"Extra":250,
+"Rank":1
 },
 {"University":"University of Toronto",
 "Tuition":6590,
@@ -12,7 +13,8 @@
 "Living":1800,
 "Co-op":"Extensive",
 "Food":true,
-"Extra":1000
+"Extra":1000,
+"Rank":2
 },
 {"University":"University of British Columbia",
 "Tuition":5646.4,
@@ -20,7 +22,8 @@
 "Living":1550,
 "Co-op":"Extensive",
 "Food":true,
-"Extra":350
+"Extra":350,
+"Rank":3
 },
 {"University":"Univeristy of Alberta",
 "Tuition":5320.8,
@@ -28,7 +31,8 @@
 "Living":2916,
 "Co-op":"Limited",
 "Food":true,
-"Extra":450
+"Extra":450,
+"Rank":4
 },
 {"University":"Western University",
 "Tuition":7576,
@@ -36,7 +40,8 @@
 "Living":1500,
 "Co-op":"Mid",
 "Food":true,
-"Extra":200
+"Extra":200,
+"Rank":5
 },
 {"University":"Université de Montréal",
 "Tuition":7500,
@@ -44,7 +49,8 @@
 "Living":2000,
 "Co-op":"Limited",
 "Food":false,
-"Extra":80
+"Extra":80,
+"Rank":6
 },
 {"University":"McMaster University",
 "Tuition":12000,
@@ -52,7 +58,8 @@
 "Living":1500,
 "Co-op":"Mid",
 "Food":true,
-"Extra":300
+"Extra":300,
+"Rank":7
 },
 {"University":"Queens Univeristy in Kingston",
 "Tuition":6153,
@@ -60,7 +67,8 @@
 "Living":3489,
 "Co-op":"Extensive",
 "Food":true,
-"Extra":300
+"Extra":300,
+"Rank":8
 },
 {"University":"University of Calgary",
 "Tuition":7200,
@@ -68,7 +76,8 @@
 "Living":1900,
 "Co-op":"Limited",
 "Food":true,
-"Extra":300
+"Extra":300,
+"Rank":9
 },
 {"University":"University of Waterloo",
 "Tuition":13500,
@@ -76,5 +85,6 @@
 "Living":1900,
 "Co-op":"Extensive",
 "Food":true,
-"Extra":200
+"Extra":200,
+"Rank":10
 }]
