@@ -41,6 +41,41 @@ a:active{color: #fff;
         text-decoration: underline;        
 }
 
+/* 大学链接样式 */
+.university-link {
+    color: #007AFF; /* 苹果蓝色 */
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.university-link:hover {
+    color: #0056CC; /* 深蓝色 */
+    background-color: rgba(0, 122, 255, 0.1);
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 122, 255, 0.2);
+}
+
+.university-link:active {
+    color: #0056CC;
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0, 122, 255, 0.2);
+}
+
+/* 大学标题样式优化 */
+.List h2 {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.List h2 a {
+    font-weight: 600;
+    font-size: 1.4em;
+}
+
 
 
 
