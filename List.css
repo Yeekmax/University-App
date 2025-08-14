@@ -15,17 +15,11 @@ background-color: bisque;
     border-radius: 15px; /* Rounded Corners */
     padding: 50px;
 }
-.question{
-    font-family: "Raleway";
-    font-size: 20px;
-}
-.select{
-    font-family: "Raleway";
-    font-size: 15px;
-}
+
 hr{
     color: black;
-    margin: 20px auto 20px;
+    margin-left: 10px;
+    margin-right: 40px;
 }
 .bottom-link{
     text-align: center;
@@ -46,3 +40,7 @@ a:hover{color: rgb(10, 40, 211);
 a:active{color: #fff;
         text-decoration: underline;        
 }
+
+
+
+
