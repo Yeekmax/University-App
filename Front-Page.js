@@ -6,3 +6,9 @@ var food = 0;
 var extra = 0;
 
 var unilist = ['McGill University','University of Toronto','University of British Columbia','Univeristy of Alberta','Western University','Université de Montréal','McMaster University','Queens Univeristy in Kingston','University of Calgary','University of Waterloo'];
+
+
+fetch("UniList.json")
+    .then(response => response.json())
+    .then(value => console.log(value))
+    .catch(error => console.error(error));
