@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大学详细信息 - University Detail</title>
+    
+    <!-- 引入CSS样式文件 -->
+    <link rel="stylesheet" href="university-detail.css">
+    
+    <!-- 引入Google Fonts字体 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- 引入图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 页面头部导航 -->
+    <header class="header">
+        <nav class="nav-container">
+            <!-- 返回按钮 - 用户可以返回到大学列表页面 -->
+            <a href="List.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i>
+                <span>返回大学列表</span>
+            </a>
+            
+            <!-- 页面标题 -->
+            <h1 class="page-title">大学详细信息</h1>
+            
+            <!-- 右侧操作区域 -->
+            <div class="header-actions">
+                <button class="btn btn-secondary" id="compareBtn">
+                    <i class="fas fa-balance-scale"></i>
+                    对比
+                </button>
+                <button class="btn btn-primary" id="favoriteBtn">
+                    <i class="fas fa-heart"></i>
+                    收藏
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 主要内容区域 -->
+    <main class="main-content">
+        <!-- 大学基本信息卡片 -->
+        <section class="university-hero">
+            <div class="hero-content">
+                <!-- 大学名称和排名 -->
+                <div class="university-info">
+                    <h1 class="university-name" id="universityName">大学名称</h1>
+                    <div class="university-meta">
+                        <span class="rank-badge">
+                            <i class="fas fa-trophy"></i>
+                            排名: <span id="universityRank">-</span>
+                        </span>
+                        <span class="location-badge">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span id="universityLocation">位置</span>
+                        </span>
+                    </div>
+                </div>
+                
+                <!-- 大学Logo/图片 -->
+                <div class="university-logo">
+                    <img id="universityImage" src="placeholder-logo.png" alt="大学Logo">
+                </div>
+            </div>
+        </section>
+
+        <!-- 费用信息概览 -->
+        <section class="costs-overview">
+            <h2 class="section-title">
+                <i class="fas fa-dollar-sign"></i>
+                费用概览
+            </h2>
+            
+            <div class="costs-grid">
+                <!-- 学费卡片 -->
+                <div class="cost-card primary">
+                    <div class="cost-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="cost-info">
+                        <h3>学费</h3>
+                        <p class="cost-amount" id="tuitionCost">$0</p>
+                        <p class="cost-period">每年</p>
+                    </div>
+                </div>
+                
+                <!-- 生活费卡片 -->
+                <div class="cost-card secondary">
+                    <div class="cost-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="cost-info">
+                        <h3>生活费</h3>
+                        <p class="cost-amount" id="livingCost">$0</p>
+                        <p class="cost-period">每月</p>
+                    </div>
+                </div>
+                
+                <!-- 额外费用卡片 -->
+                <div class="cost-card tertiary">
+                    <div class="cost-icon">
+                        <i class="fas fa-plus-circle"></i>
+                    </div>
+                    <div class="cost-info">
+                        <h3>额外费用</h3>
+                        <p class="cost-amount" id="extraCost">$0</p>
+                        <p class="cost-period">每年</p>
+                    </div>
+                </div>
+                
+                <!-- 总费用卡片 -->
+                <div class="cost-card total">
+                    <div class="cost-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <div class="cost-info">
+                        <h3>年度总费用</h3>
+                        <p class="cost-amount" id="totalCost">$0</p>
+                        <p class="cost-period">估算</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 详细信息网格 -->
+        <div class="details-grid">
+            <!-- 左侧列：学术信息 -->
+            <div class="details-column">
+                <!-- 合作项目信息 -->
+                <section class="detail-section">
+                    <h3 class="section-subtitle">
+                        <i class="fas fa-handshake"></i>
+                        合作项目 (Co-op)
+                    </h3>
+                    <div class="coop-info">
+                        <div class="coop-level" id="coopLevel">
+                            <span class="level-badge">级别</span>
+                            <p class="level-description">合作项目描述</p>
+                        </div>
+                        <div class="coop-benefits">
+                            <h4>项目优势：</h4>
+                            <ul>
+                                <li>获得实际工作经验</li>
+                                <li>建立职业网络</li>
+                                <li>赚取收入补贴学费</li>
+                                <li>提升就业竞争力</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 校园设施 -->
+                <section class="detail-section">
+                    <h3 class="section-subtitle">
+                        <i class="fas fa-building"></i>
+                        校园设施
+                    </h3>
+                    <div class="facilities-list">
+                        <div class="facility-item" id="foodFacility">
+                            <i class="fas fa-utensils"></i>
+                            <span>餐饮服务</span>
+                            <span class="facility-status">可用</span>
+                        </div>
+                        <div class="facility-item">
+                            <i class="fas fa-dumbbell"></i>
+                            <span>健身中心</span>
+                            <span class="facility-status">可用</span>
+                        </div>
+                        <div class="facility-item">
+                            <i class="fas fa-book"></i>
+                            <span>图书馆</span>
+                            <span class="facility-status">可用</span>
+                        </div>
+                        <div class="facility-item">
+                            <i class="fas fa-wifi"></i>
+                            <span>WiFi覆盖</span>
+                            <span class="facility-status">可用</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- 右侧列：地理位置和交通 -->
+            <div class="details-column">
+                <!-- 地理位置详情 -->
+                <section class="detail-section">
+                    <h3 class="section-subtitle">
+                        <i class="fas fa-map"></i>
+                        地理位置详情
+                    </h3>
+                    <div class="location-details">
+                        <div class="location-map">
+                            <!-- 这里可以嵌入地图组件 -->
+                            <div class="map-placeholder">
+                                <i class="fas fa-map-marked-alt"></i>
+                                <p>地图将在这里显示</p>
+                            </div>
+                        </div>
+                        <div class="location-info">
+                            <h4>城市信息：</h4>
+                            <ul>
+                                <li><strong>省份：</strong><span id="province">省份名称</span></li>
+                                <li><strong>人口：</strong>约 100万</li>
+                                <li><strong>气候：</strong>温带气候</li>
+                                <li><strong>主要产业：</strong>教育、科技、金融</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 交通信息 -->
+                <section class="detail-section">
+                    <h3 class="section-subtitle">
+                        <i class="fas fa-bus"></i>
+                        交通便利性
+                    </h3>
+                    <div class="transportation-info">
+                        <div class="transport-item">
+                            <i class="fas fa-plane"></i>
+                            <div>
+                                <h4>机场</h4>
+                                <p>距离最近的国际机场约30分钟车程</p>
+                            </div>
+                        </div>
+                        <div class="transport-item">
+                            <i class="fas fa-train"></i>
+                            <div>
+                                <h4>火车站</h4>
+                                <p>市中心火车站，连接主要城市</p>
+                            </div>
+                        </div>
+                        <div class="transport-item">
+                            <i class="fas fa-subway"></i>
+                            <div>
+                                <h4>公共交通</h4>
+                                <p>地铁和公交系统完善</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- 行动按钮区域 -->
+        <section class="action-section">
+            <h3 class="section-subtitle">下一步行动</h3>
+            <div class="action-buttons">
+                <button class="btn btn-large btn-primary" id="applyBtn">
+                    <i class="fas fa-paper-plane"></i>
+                    申请这所大学
+                </button>
+                <button class="btn btn-large btn-secondary" id="contactBtn">
+                    <i class="fas fa-envelope"></i>
+                    联系招生办
+                </button>
+                <button class="btn btn-large btn-outline" id="scheduleBtn">
+                    <i class="fas fa-calendar-alt"></i>
+                    预约校园参观
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页面底部 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 University Picker. 为您的大学选择提供专业指导。</p>
+            <div class="footer-links">
+                <a href="#">隐私政策</a>
+                <a href="#">使用条款</a>
+                <a href="#">联系我们</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 引入JavaScript文件 -->
+    <script src="university-detail.js"></script>
+</body>
+</html>
